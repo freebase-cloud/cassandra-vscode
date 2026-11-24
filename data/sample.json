@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "device": "pump-a",
+    "temperature": 85
+  },
+  {
+    "id": 2,
+    "device": "pump-b",
+    "temperature": 42
+  },
+  {
+    "id": 3,
+    "device": "pump-c",
+    "temperature": 91
+  }
+]

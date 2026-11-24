@@ -1,0 +1,6 @@
+{
+  "name": "cassandra-vscode",
+  "engine": "cassandra",
+  "slug": "cassandra",
+  "kind": "starter"
+}

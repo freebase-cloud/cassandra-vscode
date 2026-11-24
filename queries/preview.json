@@ -1,0 +1,38 @@
+[
+  {
+    "phase": "create",
+    "query": "CREATE TABLE fbx_cassandra_000000000000000000000000 (id int PRIMARY KEY, device text, temperature int)"
+  },
+  {
+    "phase": "seed",
+    "query": "INSERT INTO fbx_cassandra_000000000000000000000000 (id, device, temperature) VALUES (1, 'pump-a', 85)"
+  },
+  {
+    "phase": "seed",
+    "query": "INSERT INTO fbx_cassandra_000000000000000000000000 (id, device, temperature) VALUES (2, 'pump-b', 42)"
+  },
+  {
+    "phase": "seed",
+    "query": "INSERT INTO fbx_cassandra_000000000000000000000000 (id, device, temperature) VALUES (3, 'pump-c', 91)"
+  },
+  {
+    "phase": "read",
+    "query": "SELECT * FROM fbx_cassandra_000000000000000000000000 LIMIT 100"
+  },
+  {
+    "phase": "update",
+    "query": "UPDATE fbx_cassandra_000000000000000000000000 SET temperature = 95 WHERE id = 1"
+  },
+  {
+    "phase": "verify",
+    "query": "SELECT * FROM fbx_cassandra_000000000000000000000000 WHERE id = 1 LIMIT 100"
+  },
+  {
+    "phase": "delete",
+    "query": "DELETE FROM fbx_cassandra_000000000000000000000000 WHERE id = 2"
+  },
+  {
+    "phase": "cleanup",
+    "query": "DROP TABLE fbx_cassandra_000000000000000000000000"
+  }
+]
